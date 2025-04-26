@@ -79,3 +79,51 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+
+#competences .skill {
+  margin-bottom: 1.5rem;
+}
+
+#competences .skill span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.bar {
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.level {
+  background-color: #11422dda;
+  height: 10px;
+  border-radius: 10px;
+  width: 0;
+  animation: fill 2s ease forwards;
+}
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #11422dda;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cv:hover {
+  background-color: #1fbb78;
+}
+/* Responsive Design */
+
+@keyframes fill {
+  to {
+    width: var(--target);
+  }
+}

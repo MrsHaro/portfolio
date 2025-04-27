@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Ton Nom</title>
+  <title>Portfolio | Arthur TCHANDA</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <img src="pictures/72531eb0-7350-44e7-8ed9-38be44026bbe_Original.jpg" alt="Photo de profil" style="width: 150px; height: 150px; border-radius: 50%; display: block; margin: 0 auto;">
     <h1>Arthur TCHANDA</h1>
     <p>Développeur passionné par le code et l'électronique embarquée ⚡</p>
+    <button id="theme-toggle" class="theme-toggle">🌙 Mode sombre</button>
+
     <nav>
       <ul>
         <li><a href="#projets">Projets</a></li>
@@ -23,7 +28,7 @@
   </header>
 
   <main>
-    <section id="projets">
+    <section id="projets" data-aos="fade-up">
       <h2>🚀 Mes Projets</h2>
       <div class="projet">
         <h3>ElectroTools</h3>
@@ -36,7 +41,7 @@
       </div>
     </section>
 
-    <section id="a-propos">
+    <section id="a-propos" data-aos="fade-right">
       <h2>👨‍💻 À propos</h2>
       <p>Je suis étudiant en licence informatique, passionné par l'électronique et le développement logiciel.</p>
       <section id="cv">
@@ -46,7 +51,7 @@
       
     </section>
 
-    <section id="competences">
+    <section id="competences" data-aos="fade-left">
       <h2>🧠 Compétences</h2>
       <div class="skill">
         <span>HTML/CSS</span>
@@ -65,16 +70,41 @@
         <div class="bar"><div class="level" style="width: 65%;"></div></div>
       </div>
     </section>
+
+    <section id="temoignages" data-aos="zoom-in">
+      <h2>🗣️ Témoignages</h2>
+      <div class="testimonial">
+        <p>"Super projet d’alarme, très bien réalisé, bravo !" — DIMBA Evrad</p>
+      </div>
+      <div class="testimonial">
+        <p>"Toujours sérieux et créatif dans ses travaux pratiques." — Responsable de projet universitaire</p>
+      </div>
+    </section>    
     
-    <section id="contact">
+    <section id="contact" data-aos="fade-down">
       <h2>📬 Me contacter</h2>
-      <p>Email : arthurtchanda@gmail.com</p>
-      <p>GitHub : <a href="https://github.com/MrsHaro">MrsHaro</a></p>
+      <form id="contactForm" action="https://formspree.io/f/mwkgywaj" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Ton nom" required>
+        <input type="email" name="email" placeholder="Ton email" required>
+        <textarea name="message" placeholder="Ton message..." rows="6" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <div id="form-message" style="display: none; text-align: center; margin-top: 1rem;"></div>
+      <div class="loader" id="form-loader" style="display: none;"></div>
+      <!-- <p>Email : arthurtchanda@gmail.com</p>
+      <p>GitHub : <a href="https://github.com/MrsHaro">MrsHaro</a></p> -->
     </section>
   </main>
 
   <footer>
     <p>© 2025 Arthur TCHANDA — Portfolio personnel</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="index.js"></script>
+
 </body>
 </html>

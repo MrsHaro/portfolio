@@ -102,7 +102,7 @@ footer {
   height: 10px;
   border-radius: 10px;
   width: 0;
-  animation: fill 2s ease forwards;
+  animation: fill 150000s ease forwards;
 }
 
 .btn-cv {
@@ -120,8 +120,180 @@ footer {
 .btn-cv:hover {
   background-color: #1fbb78;
 }
-/* Responsive Design */
 
+#temoignages .testimonial {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 5px solid #11422dda;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 1rem;
+  background-color: #11422dda;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #1fbb78;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 3s;
+}
+
+/* Loader (spinner) */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #11422dda;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* !Switch Light/Dark mode */
+.theme-toggle {
+  background-color: transparent;
+  border: 2px solid #11422dda;
+  color: #f3f3f3;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #11422dda;
+  color: white;
+}
+
+/* Thème sombre */
+.dark-mode {
+  background-color: #121212;
+  color: #f3f3f3;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+.dark-mode a {
+  color: #84eabea5;
+}
+
+.dark-mode h2 {
+  color: #84eabea5;
+}
+.dark-mode .projet {
+  background-color: #1f1f1f; 
+  border: 1px solid #333;
+  border-left: 5px solid #84eabea5;
+  color: #f3f3f3;
+}
+
+.dark-mode .projet a,
+.dark-mode .projet button {
+  background-color: #333;
+  color: #84eabea5;
+  border-color: #84eabea5;
+}
+
+.dark-mode .projet button:hover {
+  background-color: #84eabea5;
+  color: #121212;
+}
+
+.dark-mode .btn-cv {
+  background-color: #333;
+  color: #f3f3f3;
+  border: 1px solid #84eabea5;
+}
+.dark-mode .btn-cv:hover {
+  background-color: #84eabea5;
+  color: #121212;
+}
+
+.dark-mode .bar {
+  background-color: #333;
+}
+.dark-mode .level {
+  background-color: #84eabea5;
+  animation: fill 150000s ease forwards;
+}
+.dark-mode #temoignages .testimonial {
+  background-color: #1f1f1f;
+  border-left: 5px solid #84eabea5;
+  color: #f3f3f3;
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background-color: #1f1f1f;
+  color: #f3f3f3;
+  border: 1px solid #333;
+}
+.dark-mode .contact-form button {
+  background-color: #333;
+  color: #f3f3f3;
+  border: 1px solid #84eabea5;
+}
+.dark-mode .contact-form button:hover {
+  background-color: #84eabea5;
+  color: #121212;
+}
+.dark-mode .contact-form input::placeholder {
+  color: #ccc;
+}
+.dark-mode .contact-form textarea::placeholder {
+  color: #ccc;
+}
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus {
+  border-color: #84eabea5;
+  outline: none;
+}
+/* Responsive Design */
 @keyframes fill {
   to {
     width: var(--target);

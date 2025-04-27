@@ -1,57 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projet | Alarme HC-SR04</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Projet Arduino : Alarme HC-SR04</h1>
-    <p>Capteur de distance + LEDs + buzzer + écran LCD</p>
-    <nav>
-      <a href="index.html" class="btn-cv">← Retour au Portfolio</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet | Alarme HC-SR04</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Projet Arduino : Alarme HC-SR04</h1>
+      <p>Capteur de distance + LEDs + buzzer + écran LCD</p>
+      <nav>
+        <a href="index.html" class="btn-cv">← Retour au Portfolio</a>
+      </nav>
+    </header>
 
-  <main>
-    <section>
-      <h2>🛠️ Description</h2>
-      <p>Ce projet est un système d’alarme utilisant un capteur à ultrasons HC-SR04. Selon la distance détectée, des LEDs s’allument progressivement, et un buzzer retentit si la distance est trop courte. Un écran LCD affiche la distance en temps réel.</p>
-    </section>
+    <main>
+      <section>
+        <h2>🛠️ Description</h2>
+        <p>
+          Ce projet est un système d’alarme utilisant un capteur à ultrasons
+          HC-SR04. Selon la distance détectée, des LEDs s’allument
+          progressivement, et un buzzer retentit si la distance est trop courte.
+          Un écran LCD affiche la distance en temps réel.
+        </p>
+      </section>
 
-    <section>
-      <h2>📷 Aperçu</h2>
-      <img src="pictures/Capture d'écran 2025-04-26 031544.png" alt="Prototype alarme HC-SR04" style="max-width:100%; border-radius:10px;">
-    </section>
+      <section>
+        <h2>📷 Aperçu</h2>
+        <img
+          src="pictures/Capture d'écran 2025-04-26 031544.png"
+          alt="Prototype alarme HC-SR04"
+          style="max-width: 100%; border-radius: 10px"
+        />
+      </section>
 
-    <section>
-      <h2>⚙️ Composants utilisés</h2>
-      <ul>
-      <li>Arduino UNO R3</li>
-      <li>Capteur HC-SR04</li>
-      <li>LEDs (1 verte, 2 jaunes, 2 rouges)</li>
-      <li>Buzzer</li>
-      <li>Écran LCD 16x2</li>
-      </ul>
-    </section>
+      <section>
+        <h2>⚙️ Composants utilisés</h2>
+        <ul>
+          <li>Arduino UNO R3</li>
+          <li>Capteur HC-SR04</li>
+          <li>LEDs (1 verte, 2 jaunes, 2 rouges)</li>
+          <li>Buzzer</li>
+          <li>Écran LCD 16x2</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>💡 Fonctionnement</h2>
-      <p>Chaque zone de distance allume une LED spécifique. Le buzzer retentit lorsque la dernière LED rouge s’allume. L’objectif est de visualiser et prévenir la proximité d’un objet avec un effet progressif et sonore.</p>
-    </section>
+      <section>
+        <h2>💡 Fonctionnement</h2>
+        <p>
+          Chaque zone de distance allume une LED spécifique. Le buzzer retentit
+          lorsque la dernière LED rouge s’allume. L’objectif est de visualiser
+          et prévenir la proximité d’un objet avec un effet progressif et
+          sonore.
+        </p>
+      </section>
 
-    <section>
-      <h2>💻 Code source</h2>
-      <p>Le code est disponible sur GitHub :</p>
-      <a href="https://github.com/MrsHaro/alarme-hcsr04/blob/main/ALARME.ino" target="_blank">🔗 Voir le code sur GitHub</a>
-    </section>
-    <a href="#top" class="back-to-top" style="display:block; text-align:center; margin-top:20px; text-decoration:none; font-size:20px; color: #11422dda;">⬆ Retour en haut</a>
-  </main>
+      <section>
+        <h2>💻 Code source</h2>
+        <p>Le code est disponible sur GitHub :</p>
+        <a
+          href="https://github.com/MrsHaro/alarme-hcsr04/blob/main/ALARME.ino"
+          target="_blank"
+          >🔗 Voir le code sur GitHub</a
+        >
+      </section>
+      <a
+        href="#top"
+        class="back-to-top"
+        style="
+          display: block;
+          text-align: center;
+          margin-top: 20px;
+          text-decoration: none;
+          font-size: 20px;
+          color: #11422dda;
+        "
+        >⬆ Retour en haut</a
+      >
+    </main>
 
-  <footer>
-    <p>© 2025 Arthur TCHANDA — Projet Arduino HC-SR04</p>
-  </footer>
-</body>
+    <footer>
+      <p>© 2025 Arthur TCHANDA — Projet Arduino HC-SR04</p>
+    </footer>
+  </body>
 </html>

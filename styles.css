@@ -310,7 +310,8 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   background-color: #11422dda;
   color: white;
   border: none;
@@ -319,13 +320,18 @@ footer {
   font-size: 20px;
   cursor: pointer;
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  transition: opacity 0.4s, visibility 0.4s, background-color 0.3s;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 #back-to-top:hover {
-  background-color: #84eabea5;
+  background-color: #1fbb78;
+  color: #11422dda;
 }
-
 
 /* Responsive Design */
 @keyframes fill {

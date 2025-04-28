@@ -57,14 +57,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Bouton pour remonter en haut
+// Bouton pour remonter en haut (avec animation)
 const backToTopButton = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) { // apparait après 300px
-    backToTopButton.style.display = "block";
+  if (window.scrollY > 300) {
+    backToTopButton.classList.add("show");
   } else {
-    backToTopButton.style.display = "none";
+    backToTopButton.classList.remove("show");
   }
 });
 
@@ -74,3 +74,4 @@ backToTopButton.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+

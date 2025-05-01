@@ -1,0 +1,203 @@
+/* === Réglages de base === */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background 0.4s, color 0.4s;
+  background: #ffffff;
+  color: #333;
+}
+
+/* === Thème sombre === */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* === Header === */
+header {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+h1 {
+  margin-bottom: 0.2rem;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #000000;
+  transition: color 0.3s;
+}
+.theme-toggle:hover {
+  color: #007bff;
+}
+body.dark-mode .theme-toggle {
+  color: #ffffff;
+}
+body.dark-mode .theme-toggle:hover {
+  color: #4dabf7;
+}
+
+/* === Navigation === */
+nav {
+  margin-top: 1rem;
+}
+.btn-cv {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.btn-cv:hover {
+  background-color: #11422dda;
+}
+
+/* === Sections === */
+main {
+  padding: 2rem;
+}
+section {
+  margin-bottom: 2rem;
+}
+section h2 {
+  color: #007bff;
+}
+body.dark-mode section h2 {
+  color: #4dabf7;
+}
+
+.link-github {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.link-github:hover {
+  color: #0164b5;
+  text-decoration: underline;
+}
+body.dark-mode .link-github:hover {
+  color: #4dabf7;
+  text-decoration: underline;
+}
+
+/* === Bouton retour en haut === */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+#back-to-top:hover {
+  background-color: #0056b3;
+}
+body.dark-mode #back-to-top {
+  background-color: #4dabf7;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  margin-top: 3rem;
+}
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+/* === Animation de transition page === */
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.page-transition.fade-out {
+  opacity: 0;
+}
+
+/* === Loader écran complet === */
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 15s ease;
+}
+
+#page-loader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Spinner*/
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #999;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Rotation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body.dark-mode #page-loader {
+  background: #121212;
+}
+
+/* === Media Queries === */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  .btn-cv {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

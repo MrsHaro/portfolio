@@ -29,22 +29,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         // Paramètres du serveur SMTP (à adapter)
         $mail->isSMTP();
-        $mail->Host       = 'smtp.example.com';       // Serveur SMTP
+        $mail->Host       = '...@smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'votre_email@example.com'; // Votre adresse email
-        $mail->Password   = 'votre_mdp';               // Votre mot de passe
+        $mail->Username   = 'arthurtchanda@gmail.com';
+        $mail->Password   = 'mafamille@07';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        // Destinataires
+        // vers moi
         $mail->setFrom('votre_email@example.com', 'Portfolio Contact');
         $mail->addAddress('arthurtchanda@gmail.com', 'Arthur TCHANDA');
 
-        // Contenu du message
+        // Content
         $mail->Subject = 'Nouveau message du formulaire de contact';
         $mail->Body    = "Nom : {$name}\nEmail : {$email}\n\nMessage :\n{$message}";
 
-        // Envoi
+        //send
         $mail->send();
         header('Location: index.html?status=success');
         exit;

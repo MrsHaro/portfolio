@@ -29,7 +29,7 @@ const toggleButton = document.getElementById("theme-toggle");
 // Quand la page charge, vérifier si un thème est sauvegardé
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark-mode");
-  toggleButton.textContent = "☀️ Mode clair"; // mettre le bon texte dès le début
+  toggleButton.textContent = "☀️ Mode clair";
 }
 
 toggleButton.addEventListener("click", () => {
@@ -37,10 +37,10 @@ toggleButton.addEventListener("click", () => {
 
   if (document.body.classList.contains("dark-mode")) {
     toggleButton.textContent = "☀️ Mode clair";
-    localStorage.setItem("theme", "dark"); // sauvegarder dark
+    localStorage.setItem("theme", "dark");
   } else {
     toggleButton.textContent = "🌙 Mode sombre";
-    localStorage.setItem("theme", "light"); // sauvegarder light
+    localStorage.setItem("theme", "light");
   }
 });
 // Scroll doux vers les ancres
@@ -57,7 +57,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Bouton pour remonter en haut (avec animation)
+// Bouton pour remonter en haut
 const backToTopButton = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
@@ -73,5 +73,34 @@ backToTopButton.addEventListener("click", () => {
     top: 0,
     behavior: "smooth"
   });
+});
+
+// === Animation de transition entre les pages ===
+document.querySelectorAll("a").forEach(link => {
+  const href = link.getAttribute("href");
+  if (href && !href.startsWith("#") && !href.startsWith("mailto:") && !link.hasAttribute("target")) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300); // Doit correspondre au CSS: transition-duration
+    });
+  }
+});
+
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("fade-out");
+});
+
+// === Loader au démarrage de la page ===
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  loader.classList.add("fade-out");
+
+  // Retire complètement du DOM après transition
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 500);
 });
 

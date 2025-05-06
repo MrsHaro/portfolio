@@ -91,6 +91,7 @@ footer {
   margin-bottom: 0.3rem;
 }
 
+
 .bar {
   background-color: #e0e0e0;
   height: 10px;
@@ -411,6 +412,33 @@ footer {
 body.dark-mode #page-loader {
   background: #121212;
 }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1px 0;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: var(--text-color, #11422dda);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #1fbb78;
+  transform: scale(1.2);
+}
+
+.dark-mode .social-links a {
+  color: #333;
+}
+.dark-mode .social-links a:hover {
+  color: #84eabea5;
+  transform: scale(1.2);
+}
+
 
 
 /* Responsive Design */

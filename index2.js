@@ -57,12 +57,10 @@ window.addEventListener("pageshow", () => {
   document.body.classList.remove("fade-out");
 });
 
-// === Loader au démarrage de la page ===
 window.addEventListener("load", () => {
   const loader = document.getElementById("page-loader");
   loader.classList.add("fade-out");
 
-  // Retire complètement du DOM après transition
   setTimeout(() => {
     loader.style.display = "none";
   }, 500);

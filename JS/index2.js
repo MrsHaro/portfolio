@@ -1,14 +1,14 @@
-// === Gestion du thème depuis le localStorage ===
+// ===Gestion du theme depuis le localStorage ===
 const toggleButton = document.getElementById("theme-toggle");
 const prefersDark = localStorage.getItem("theme") === "dark";
 
-// Appliquer le thème au chargement
+// ?Appliquer le theme au chargement
 if (prefersDark) {
   document.body.classList.add("dark-mode");
   toggleButton.textContent = "☀️ Mode clair";
 }
 
-// Changement de thème
+// ?Changement de thème
 toggleButton.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
@@ -17,7 +17,7 @@ toggleButton.addEventListener("click", () => {
   toggleButton.textContent = isDark ? "☀️ Mode clair" : "🌙 Mode sombre";
 });
 
-// === Scroll fluide sur les liens internes ===
+//* === Scroll fluide sur les liens internes ===
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
@@ -28,7 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// === Bouton retour en haut ===
+//* === Bouton retour en haut ===
 const backToTopBtn = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
@@ -39,7 +39,7 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// ===ransition entre les pages ===
+//* ===transition entre les pages ===
 document.querySelectorAll("a").forEach(link => {
   const href = link.getAttribute("href");
   if (href && !href.startsWith("#") && !href.startsWith("mailto:") && !link.hasAttribute("target")) {

@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet | Alarme HC-SR04</title>
-    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="/CSS/styles_hcsr04.css" />
   </head>
   <body class="page-transition">
     <div id="page-loader">
       <div class="loader-spinner"></div>
-    </div>    
-    
+    </div>
+
     <header>
       <h1>Projet Arduino : Alarme HC-SR04</h1>
       <p>Capteur de distance + LEDs + buzzer + écran LCD</p>
       <button id="theme-toggle" class="theme-toggle">🌙 Mode sombre</button>
       <nav>
-        <a href="index.html" class="btn-cv">← Retour au Portfolio</a>
+        <a href="/HTML/index.html" class="btn-cv">← Retour au Portfolio</a>
       </nav>
     </header>
 
@@ -34,7 +34,7 @@
       <section>
         <h2>📷 Aperçu</h2>
         <img
-          src="pictures/Capture d'écran 2025-04-30 150450.png"
+          src="pictures/hcsr04/Capture d'écran 2025-04-30 150450.png"
           alt="Prototype alarme HC-SR04"
           style="max-width: 100%; border-radius: 10px"
         />
@@ -58,17 +58,21 @@
       <section>
         <h2>💡 Fonctionnement</h2>
         <p>
-          Chaque zone de distance allume une LED spécifique, inferieure a 300cm allume la vert; inferieure a 150cm allume la jaune; et inferieure a 75cm allume la rouge. Et Le buzzer retentit. L’objectif est de visualiser
-          et prévenir la proximité d’un objet avec un effet progressif et
-          sonore.
+          Chaque zone de distance allume une LED spécifique, inferieure a 300cm
+          allume la vert; inferieure a 150cm allume la jaune; et inferieure a
+          75cm allume la rouge. Et Le buzzer retentit. L’objectif est de
+          visualiser et prévenir la proximité d’un objet avec un effet
+          progressif et sonore.
         </p>
       </section>
 
       <section>
         <h2>💻 Code source</h2>
         <p>Le code est disponible sur GitHub :</p>
-        <a href="https://github.com/MrsHaro/alarme-hcsr04/blob/main/ALARME.ino"
-          target="_blank" class="link-github"
+        <a
+          href="https://github.com/MrsHaro/alarme-hcsr04/blob/main/ALARME.ino"
+          target="_blank"
+          class="link-github"
           >🔗 Voir le code sur GitHub</a
         >
       </section>
@@ -79,6 +83,6 @@
     <footer>
       <p>© 2025 Arthur TCHANDA — Projet Arduino HC-SR04</p>
     </footer>
-    <script src="index2.js"></script>
+    <script src="/JS/index2.js"></script>
   </body>
 </html>

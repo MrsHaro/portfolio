@@ -131,11 +131,27 @@ footer {
   transition: background-color 0.3s ease;
 }
 
+.btn-project2 {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #11422dda;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+
 .btn-cv:hover {
   background-color: #1fbb78;
 }
 .btn-project:hover {
   background-color: #007bff;
+}
+.btn-project2:hover {
+  background-color: #ff6200;
 }
 
 #temoignages .testimonial {
@@ -278,6 +294,16 @@ footer {
 }
 .dark-mode .btn-project:hover {
   background-color: #4dabf7;
+  color: #121212;
+}
+
+.dark-mode .btn-project2 {
+  background-color: #333;
+  color: #f3f3f3;
+  border: 1px solid #84eabea5;
+}
+.dark-mode .btn-project2:hover {
+  background-color: #ff6200;
   color: #121212;
 }
 

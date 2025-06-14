@@ -26,7 +26,6 @@ form.addEventListener("submit", function (event) {
 // ! Gestion du changement de thème
 const toggleButton = document.getElementById("theme-toggle");
 
-// Quand la page charge, vérifier si un thème est sauvegardé
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark-mode");
   toggleButton.textContent = "☀️ Mode clair";
@@ -43,7 +42,8 @@ toggleButton.addEventListener("click", () => {
     localStorage.setItem("theme", "light");
   }
 });
-// Scroll doux vers les ancres
+
+// ?Scroll doux vers les ancres
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -57,7 +57,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Bouton pour remonter en haut
+// ?Bouton pour remonter en haut
 const backToTopButton = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
@@ -75,7 +75,7 @@ backToTopButton.addEventListener("click", () => {
   });
 });
 
-// === Animation de transition entre les pages ===
+//*=== Animation de transition entre les pages ===
 document.querySelectorAll("a").forEach(link => {
   const href = link.getAttribute("href");
   if (href && !href.startsWith("#") && !href.startsWith("mailto:") && !link.hasAttribute("target")) {
@@ -84,7 +84,7 @@ document.querySelectorAll("a").forEach(link => {
       document.body.classList.add("fade-out");
       setTimeout(() => {
         window.location.href = href;
-      }, 300); // Doit correspondre au CSS: transition-duration
+      }, 300);
     });
   }
 });

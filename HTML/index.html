@@ -1,138 +1,293 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Arthur TCHANDA</title>
-  <link rel="stylesheet" href="/CSS/styles.css">
-  <!-- AOS Animation CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Arthur TCHANDA</title>
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <!-- AOS Animation CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Google Fonts: Inter (body) + Poppins (headings) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body class="page-transition">
-  <div id="page-loader">
-    <div class="loader-spinner"></div>
-  </div>
-  
-  <header>
-    <img src="/pictures/72531eb0-7350-44e7-8ed9-38be44026bbe_Original.jpg" alt="Photo de profil" style="width: 150px; height: 150px; border-radius: 50%; display: block; margin: 0 auto;">
-    <h1>Arthur TCHANDA</h1>
-    <p>Développeur passionné par le code et l'électronique embarquée ⚡</p>
-    <button id="theme-toggle" class="theme-toggle">🌙 Mode sombre</button>
-
-    <nav>
-      <ul>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#a-propos">À propos</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#contact">Contact</a></li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="projets" data-aos="fade-up">
-      <h2>🚀 Mes Projets</h2>
-      <div class="projet">
-        <h3>ElectroTools</h3>
-        <p>Application mobile pour calculs électroniques.</p>
-      </div>
-      <div class="projet">
-        <h3>Alarme capteur HC-SR04</h3>
-        <p>Prototype Arduino avec LEDs, LCD et buzzer.</p>
-        <a href="/HTML/projet-hcsr04.html" class="btn-project">Voir le projet</a>
-      </div>
-      <div class="projet">
-        <h3>PasswordVault</h3>
-        <p>Gestionnaire de mots de passe sécurisé.</p>
-        <a href="/HTML/PasswordVault.html" class="btn-project2">Voir le projet</a>
-      </div>
-    </section>
-
-    <section id="a-propos" data-aos="fade-right">
-      <h2>👨‍💻 À propos</h2>
-      <p>Je suis étudiant en licence informatique, passionné par l'électronique et le développement logiciel.</p>
-      <section id="cv">
-        <p>Tu peux télécharger mon CV ici :</p>
-        <a href="/CV Professionnel Arthur TCHANDA.pdf" download class="btn-cv" target="_blank">Télécharger le CV</a>
-      </section>
-    </section>
-
-    <section id="competences" data-aos="fade-left">
-      <h2>🧠 Compétences</h2>
-      <div class="skill">
-        <span>HTML/CSS</span>
-        <div class="bar"><div class="level" style="width: 95%;"></div></div>
-      </div>
-      <div class="skill">
-        <span>JavaScript</span>
-        <div class="bar"><div class="level" style="width: 75%;"></div></div>
-      </div>
-      <div class="skill">
-        <span>Arduino / Electronique</span>
-        <div class="bar"><div class="level" style="width: 50%;"></div></div>
-      </div>
-      <div class="skill">
-        <span>Python</span>
-        <div class="bar"><div class="level" style="width: 80%;"></div></div>
-      </div>
-      <div class="skill">
-        <span>SQL/php</span>
-        <div class="bar"><div class="level" style="width: 60%;"></div></div>
-      </div>
-    </section>
-
-    <section id="temoignages" data-aos="zoom-in">
-      <h2>🗣️ Témoignages</h2>
-      <div class="testimonial">
-        <p>"Super projet d’alarme, très bien réalisé, bravo !" — DIMBA Evrad</p>
-      </div>
-      <div class="testimonial">
-        <p>"Toujours sérieux et créatif dans ses travaux pratiques." — Responsable de projet universitaire</p>
-      </div>
-    </section>    
-    
-    <section id="contact" data-aos="fade-down">
-      <h2>📬 Me contacter</h2>
-      <form  class="contact-form" action="https://formspree.io/f/xwpopzgy" method="POST">
-        <input type="text" name="name" placeholder="Ton nom" required>
-        <input type="email" name="email" placeholder="Ton email" required>
-        <textarea name="message" placeholder="Ton message..." rows="6" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-      <div id="form-message" style="display: none; text-align: center; margin-top: 1rem;"></div>
-      <div class="loader" id="form-loader" style="display: none;"></div>
-      <!-- <p>Email : arthurtchanda@gmail.com</p>
-      <p>GitHub : <a href="https://github.com/MrsHaro">MrsHaro</a></p> -->
-    </section>
-  </main>
-
-  <button id="back-to-top" title="Remonter en haut">⬆</button>
-
-  <footer>
-    <p>© 2025 Arthur TCHANDA — Portfolio personnel</p>
-    <div class="social-links">
-      <a href="https://github.com/MrsHaro" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/arthur-tchanda-772b0a363/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/Arthur.TCHANDA" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+  <body class="page-transition">
+    <div id="page-loader">
+      <div class="loader-spinner"></div>
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <header>
+      <img
+        src="/pictures/72531eb0-7350-44e7-8ed9-38be44026bbe_Original.jpg"
+        alt="Photo de profil"
+        style="
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto;
+        "
+      />
+      <h1>Arthur TCHANDA</h1>
+      <p>Développeur web et passionné d'électronique embarquée.</p>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Changer le thème"
+      >
+        <svg
+          class="theme-toggle-icon sun-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="theme-toggle-icon moon-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <span class="theme-toggle-text">Mode sombre</span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="projets" data-aos="fade-up">
+        <h2 class="with-icon">Mes projets</h2>
+        <div class="projet">
+          <h3>ElectroTools</h3>
+          <p>Application mobile pour calculs électroniques.</p>
+        </div>
+        <div class="projet">
+          <h3>Alarme capteur HC-SR04</h3>
+          <p>Prototype Arduino avec LEDs, LCD et buzzer.</p>
+          <a href="/HTML/projet-hcsr04.html" class="btn-project"
+            >Voir le projet</a
+          >
+        </div>
+        <div class="projet">
+          <h3>PasswordVault</h3>
+          <p>Gestionnaire de mots de passe sécurisé.</p>
+          <a href="/HTML/PasswordVault.html" class="btn-project2"
+            >Voir le projet</a
+          >
+        </div>
+        <div class="projet">
+          <h3>JS-TasksFlow</h3>
+          <p>Application To‑Do moderne (tri, filtres, export/import).</p>
+          <a href="/HTML/TaskFlow.html" class="btn-project3"
+            >Voir le projet</a
+          >
+      </section>
+
+      <section id="a-propos" data-aos="fade-right">
+        <h2 class="with-icon">À propos</h2>
+        <p style="overflow: hidden">
+          <img
+            src="/pictures/Design sans titre.png"
+            alt="Arthur TCHANDA"
+            style="
+              float: left;
+              width: 200px;
+              height: auto;
+              border-radius: 8px;
+              margin: 5px 15px 8px 12px;
+            "
+          />
+          <span style="font-size: 1.2em; line-height: 30px"
+            ><i
+              >De mon nom complet <b>TCHANDA DJOUONANG Arthur Clairaud</b> né le
+              28 février 2004 à Douala (Cameroun), je suis étudiant en licence
+              <b>Electronique Telecom et Système Embarqué</b> à l'Institut
+              Supérieur de Management (ISM), passionné par l'électronique et le
+              développement logiciel. Mon objectif est de créer des solutions
+              innovantes qui combinent hardware et software. Je suis
+              particulièrement intéressé par l'IoT, l'intelligence artificielle,
+              la programmation embarquée et le développement web moderne.</i
+            ></span
+          >
+        </p>
+        <section id="cv">
+          <a
+            href="/CV Professionnel Arthur TCHANDA.pdf"
+            download
+            class="btn-cv"
+            target="_blank"
+            >Télécharger le CV</a
+          >
+        </section>
+      </section>
+
+      <section id="competences" data-aos="fade-left">
+        <h2 class="with-icon">Compétences</h2>
+        <div class="skill">
+          <span>HTML/CSS</span>
+          <div class="bar"><div class="level" style="width: 95%"></div></div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="bar"><div class="level" style="width: 60%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Arduino / Node-Red</span>
+          <div class="bar"><div class="level" style="width: 70%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Python</span>
+          <div class="bar"><div class="level" style="width: 80%"></div></div>
+        </div>
+        <div class="skill">
+          <span>SQL/php</span>
+          <div class="bar"><div class="level" style="width: 40%"></div></div>
+        </div>
+      </section>
+
+      <section id="temoignages" data-aos="zoom-in">
+        <h2 class="with-icon">Parcours</h2>
+        <div class="testimonial">
+          <h3>Baccalauréat scientifique (2023)</h3>
+          <p>
+            J'ai obtenu mon baccalauréat scientifique (S2) en 2023 au collège sacré cœur, Dakar, Sénégal.
+          </p>
+        </div>
+        <div class="testimonial">
+          <h3>Licence Electronique Telecom et Système Embarqué (en cours)</h3>
+          <p>
+            Actuellement en troisième année de licence à l'Institut Supérieur de Management (ISM) à Dakar, Sénégal.
+          </p>
+        </div>
+        <div class="testimonial">
+          <h3>Stages et Projets</h3>
+          <p>
+            J'ai réalisé plusieurs projets personnels et stages en développement web et électronique embarquée, renforçant mes compétences pratiques, notamment un stage de 3 mois a ISM (Institut Supérieur de Management) où j'ai travaillé sur la creation de PCB et de solutions embarquées innovantes, et un stage en développement web et mobile a Ecole au Sénégal.
+          </p>
+        </div>
+        <div class="testimonial">
+          <h3>Auto-Formation en développement web (2021-en cours)</h3>
+          <p>
+            Depuis 2021, je me forme de manière autonome au développement web (HTML, CSS, JavaScript) et en 2024 je me suis intéressé à l'électronique embarquée (Arduino, capteurs, IoT, Node-Red) à travers ma filière d'études et des projets personnel pratiques, comme la conception d'un système de surveillance IoT.
+          </p>
+        </div>
+
+        <div class="testimonial">
+          <h3>Dans le futur...</h3>
+          <p>
+            je souhaite devenir un ingénieur en systèmes embarqués, en combinant mes compétences en développement logiciel et en électronique pour créer des solutions innovantes dans des domaines comme l'IoT, ales véhicules autonomes ou la domotique.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" data-aos="fade-down">
+        <h2 class="with-icon">Me contacter</h2>
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xwpopzgy"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Ton nom" required />
+          <input type="email" name="email" placeholder="Ton email" required />
+          <textarea
+            name="message"
+            placeholder="Ton message..."
+            rows="6"
+            required
+          ></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+        <div
+          id="form-message"
+          style="display: none; text-align: center; margin-top: 1rem"
+        ></div>
+        <div class="loader" id="form-loader" style="display: none"></div>
+
+        <!-- Contact details (email + phone) - styled and accessible -->
+        <div class="contact-info" aria-label="Coordonnées">
+          <a
+            href="mailto:arthurtchanda@gmail.com"
+            class="contact-item"
+            aria-label="Envoyer un email"
+          >
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>arthurtchanda@gmail.com</span>
+          </a>
+          <a href="tel:+221784553487" class="contact-item" aria-label="Appeler">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>+221 78 455 34 87</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <button id="back-to-top" title="Remonter en haut">⬆</button>
+
+    <footer>
+      <p>© 2025 Arthur TCHANDA — Portfolio personnel</p>
+      <div class="social-links">
+        <a href="https://github.com/MrsHaro" target="_blank" aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/arthur-tchanda-772b0a363/"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/Arthur.TCHANDA"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="/JS/index.js"></script>
+  </body>
+
   <script>
-    AOS.init();
+    window.onload = function () {
+      document.body.style.zoom = "110%";
+    };
   </script>
-  <script src="/JS/index.js"></script>
-
-</body>
-
-<script>
-  window.onload = function() {
-    document.body.style.zoom = "110%"; 
-  };
-</script>
-
 </html>

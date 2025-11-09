@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projet | Alarme HC-SR04</title>
     <link rel="stylesheet" href="/CSS/styles_hcsr04.css" />
+    <!-- Google Fonts: Inter (body) + Poppins (headings) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="page-transition">
     <div id="page-loader">
@@ -22,7 +27,7 @@
 
     <main>
       <section>
-        <h2>🛠️ Description</h2>
+        <h2 class="with-icon">Description</h2>
         <p>
           Ce projet est un système d’alarme utilisant un capteur à ultrasons
           HC-SR04. Selon la distance détectée, des LEDs s’allument
@@ -32,7 +37,7 @@
       </section>
 
       <section>
-        <h2>📷 Aperçu</h2>
+        <h2 class="with-icon">Aperçu</h2>
         <img
           src="/pictures/hcsr04/Capture d'écran 2025-04-30 150450.png"
           alt="Prototype alarme HC-SR04"
@@ -41,7 +46,7 @@
       </section>
 
       <section>
-        <h2>⚙️ Composants utilisés</h2>
+        <h2 class="with-icon">Composants utilisés</h2>
         <ul>
           <li>Arduino UNO R3</li>
           <li>Capteur HC-SR04</li>
@@ -56,7 +61,7 @@
       </section>
 
       <section>
-        <h2>💡 Fonctionnement</h2>
+        <h2 class="with-icon">Fonctionnement</h2>
         <p>
           Chaque zone de distance allume une LED spécifique, inferieure a 300cm
           allume la vert; inferieure a 150cm allume la jaune; et inferieure a
@@ -67,7 +72,7 @@
       </section>
 
       <section>
-        <h2>💻 Code source</h2>
+        <h2 class="with-icon">Code source</h2>
         <p>Le code est disponible sur GitHub :</p>
         <a
           href="https://github.com/MrsHaro/alarme-hcsr04/blob/main/ALARME.ino"

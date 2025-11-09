@@ -28,30 +28,31 @@ const toggleButton = document.getElementById("theme-toggle");
 
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark-mode");
-  toggleButton.textContent = "☀️ Mode clair";
+  toggleButton.querySelector(".theme-toggle-text").textContent = "Mode clair";
 }
 
 toggleButton.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
   if (document.body.classList.contains("dark-mode")) {
-    toggleButton.textContent = "☀️ Mode clair";
+    toggleButton.querySelector(".theme-toggle-text").textContent = "Mode clair";
     localStorage.setItem("theme", "dark");
   } else {
-    toggleButton.textContent = "🌙 Mode sombre";
+    toggleButton.querySelector(".theme-toggle-text").textContent =
+      "Mode sombre";
     localStorage.setItem("theme", "light");
   }
 });
 
 // ?Scroll doux vers les ancres
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
     if (target) {
       target.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "start",
       });
     }
   });
@@ -71,14 +72,19 @@ window.addEventListener("scroll", () => {
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
 //*=== Animation de transition entre les pages ===
-document.querySelectorAll("a").forEach(link => {
+document.querySelectorAll("a").forEach((link) => {
   const href = link.getAttribute("href");
-  if (href && !href.startsWith("#") && !href.startsWith("mailto:") && !link.hasAttribute("target")) {
+  if (
+    href &&
+    !href.startsWith("#") &&
+    !href.startsWith("mailto:") &&
+    !link.hasAttribute("target")
+  ) {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       document.body.classList.add("fade-out");
@@ -103,4 +109,3 @@ window.addEventListener("load", () => {
     loader.style.display = "none";
   }, 500);
 });
-

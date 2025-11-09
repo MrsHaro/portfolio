@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet | PasswordVault</title>
+    <link rel="stylesheet" href="/CSS/TaskFlow.css" />
+    <!-- Google Fonts: Inter (body) + Poppins (headings) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-transition">
+    <div id="page-loader">
+      <div class="loader-spinner"></div>
+    </div>
+
+    <header>
+      <h1>
+        Projet JavaScript : <span style="color: #ffd700;">JS</span><span style="color: rgb(255, 123, 0);">-</span><span style="color: rgb(44, 114, 255);">TasksFlow</span>
+      </h1>
+      <p>Application To‑Do riche en fonctionnalités - tri, filtres, export/import.</p>
+      <button id="theme-toggle" class="theme-toggle">🌙 Mode sombre</button>
+      <nav>
+        <a href="/HTML/index.html" class="btn-cv">Retour à l'accueil</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2 class="with-icon">Description</h2>
+        <p>
+            JS-TasksFlow est une application légère et intuitive pour gérer vos tâches. Elle permet de définir des dates d'échéance, des priorités et des catégories. De plus, elle offre des fonctionnalités d'export/import au format JSON, tout en intégrant des animations FLIP et des confettis.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="with-icon">Aperçu</h2>
+        <div class="carousel">
+          <div class="carousel-track">
+            <img
+              src="../pictures/JST/acc.png"
+              alt="page d'accueil de JS-TasksFlow"
+            />
+            <img
+              src="../pictures/JST/date.png"
+              alt="attribution d'une date a une tâche dans JS-TasksFlow"
+            />
+            <img
+              src="../pictures/JST/prioriter.png"
+              alt="attribution d'une priorité a une tâche dans JS-TasksFlow"
+            />
+            <img
+              src="../pictures/JST/catego.png"
+              alt="attribution d'une catégorie a une tâche dans JS-TasksFlow"
+            />
+            <img
+              src="../pictures/JST/filtr_catego.png"
+              alt="section de filtrage par catégorie dans JS-TasksFlow"
+            />
+            <img
+              src="../pictures/JST/filtr_mixte.png"
+              alt="section de filtrage mixte dans JS-TasksFlow"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="with-icon">Technologies utilisées pour JS-TasksFlow</h2>
+
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML5 : structure de base de l'interface utilisateur</li>
+          <li>CSS3 : styles et animations de l'interface</li>
+          <li>JavaScript : logique côté client et interactions</li>
+        </ul>
+
+        <h3>Framework Desktop</h3>
+        <ul>
+          <li>
+            Electron - Version : ^32.2.0 - permet de transformer l'application
+            web en application desktop et d'intégrer nativement le système
+            d'exploitation Windows
+          </li>
+        </ul>
+
+        <h3>Build & Packaging</h3>
+        <ul>
+          <li>
+            electron-builder - Version : ^25.1.8 - outil de build pour créer
+            l'exécutable Windows, génère l'installateur NSIS et crée le package
+            distributable
+          </li>
+        </ul>
+
+        <h3>Stockage</h3>
+        <ul>
+          <li>localStorage : stockage local des données côté client</li>
+          <li>
+            JSON : format de données utilisé pour la persistance et
+            l'export/import
+          </li>
+        </ul>
+
+        <h3>Autres caractéristiques</h3>
+        <ul>
+          <li>Architecture modulaire</li>
+          <li>Interface native Windows grâce à Electron</li>
+          <li>
+            Gestion des événements système (notifications, raccourcis, etc.)
+          </li>
+          <li>Auto-packaging avec NSIS via electron-builder</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="with-icon">Fonctionnement</h2>
+        <p>
+          Ajoutez, éditez, marquez comme terminé ou supprimez des tâches.
+          Filtrez par statut ou catégorie et triez par date ou priorité.
+          Exportez vos tâches au format JSON pour les sauvegarder ou les
+          partager, et importez-les facilement. L'interface utilise des
+          animations FLIP pour des transitions fluides, et des confettis
+          célèbrent chaque tâche terminée.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="with-icon">Code source</h2>
+        <p>Le code est disponible sur GitHub :</p>
+        <a
+          href="https://github.com/MrsHaro/JS_TasksFlow/tree/main/todo-list-app"
+          target="_blank"
+          class="link-github"
+          >🔗 Voir le code sur GitHub</a
+        >
+      </section>
+
+      <section class="download-section">
+        <a
+          href="https://github.com/MrsHaro/JS_TasksFlow/releases/tag/v1.0.0"
+          target="_blank"
+          class="btn-download"
+        >
+          Télécharger JS-TasksFlow (.exe)
+        </a>
+      </section>
+    </main>
+
+    <button id="back-to-top" title="Remonter en haut">⬆</button>
+
+    <footer>
+      <p>© 2025 Arthur TCHANDA — Projet JS-TasksFlow</p>
+    </footer>
+    <script src="/JS/TaskFlow.js"></script>
+  </body>
+</html>

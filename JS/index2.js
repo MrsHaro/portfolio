@@ -5,7 +5,7 @@ const prefersDark = localStorage.getItem("theme") === "dark";
 // ?Appliquer le theme au chargement
 if (prefersDark) {
   document.body.classList.add("dark-mode");
-  toggleButton.textContent = "☀️ Mode clair";
+  toggleButton.textContent = "Mode clair";
 }
 
 // ?Changement de thème
@@ -14,7 +14,7 @@ toggleButton.addEventListener("click", () => {
 
   const isDark = document.body.classList.contains("dark-mode");
   localStorage.setItem("theme", isDark ? "dark" : "light");
-  toggleButton.textContent = isDark ? "☀️ Mode clair" : "🌙 Mode sombre";
+  toggleButton.textContent = isDark ? "Mode clair" : "Mode sombre";
 });
 
 //* === Scroll fluide sur les liens internes ===

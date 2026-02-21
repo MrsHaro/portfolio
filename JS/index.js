@@ -109,3 +109,23 @@ window.addEventListener("load", () => {
     loader.style.display = "none";
   }, 500);
 });
+
+// *=== Animation des barres de compétences au scroll ===
+const skillsSection = document.getElementById("competences");
+if (skillsSection) {
+  const levels = document.querySelectorAll("#competences .level");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const level = entry.target;
+        const width = level.dataset.width || "0";
+        level.style.setProperty("--skill-width", width + "%");
+        level.classList.add("animated");
+        observer.unobserve(level);
+      });
+    },
+    { threshold: 0.3, rootMargin: "0px 0px -30px 0px" }
+  );
+  levels.forEach((el) => observer.observe(el));
+}

@@ -27,19 +27,16 @@
     </div>
 
     <header>
-      <img
-        src="/pictures/72531eb0-7350-44e7-8ed9-38be44026bbe_Original.jpg"
-        alt="Photo de profil"
-        style="
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
-          display: block;
-          margin: 0 auto;
-        "
-      />
-      <h1>Arthur TCHANDA</h1>
-      <p>Développeur web et passionné d'électronique embarquée.</p>
+      <div class="header-content">
+        <div class="profile-img-wrap">
+          <img
+            src="/pictures/72531eb0-7350-44e7-8ed9-38be44026bbe_Original.jpg"
+            alt="Photo de profil Arthur TCHANDA"
+          />
+        </div>
+        <h1>Arthur TCHANDA</h1>
+        <p>Développeur web et passionné d'électronique embarquée.</p>
+      </div>
       <button
         id="theme-toggle"
         class="theme-toggle"
@@ -89,37 +86,38 @@
     </header>
 
     <main>
-      <section id="projets" data-aos="fade-up">
-        <h2 class="with-icon">Mes projets</h2>
-        <div class="projet">
+      <section id="projets">
+        <h2 class="with-icon" data-aos="fade-down">Mes projets</h2>
+        <div class="projet" data-aos="fade-up" data-aos-delay="0">
           <h3>ElectroTools</h3>
           <p>Application mobile pour calculs électroniques.</p>
         </div>
-        <div class="projet">
+        <div class="projet" data-aos="fade-up" data-aos-delay="100">
           <h3>Alarme capteur HC-SR04</h3>
           <p>Prototype Arduino avec LEDs, LCD et buzzer.</p>
           <a href="/HTML/projet-hcsr04.html" class="btn-project"
             >Voir le projet</a
           >
         </div>
-        <div class="projet">
+        <div class="projet" data-aos="fade-up" data-aos-delay="200">
           <h3>PasswordVault</h3>
           <p>Gestionnaire de mots de passe sécurisé.</p>
           <a href="/HTML/PasswordVault.html" class="btn-project2"
             >Voir le projet</a
           >
         </div>
-        <div class="projet">
+        <div class="projet" data-aos="fade-up" data-aos-delay="300">
           <h3>JS-TasksFlow</h3>
           <p>Application To‑Do moderne (tri, filtres, export/import).</p>
           <a href="/HTML/TaskFlow.html" class="btn-project3"
             >Voir le projet</a
           >
+        </div>
       </section>
 
-      <section id="a-propos" data-aos="fade-right">
-        <h2 class="with-icon">À propos</h2>
-        <p style="overflow: hidden">
+      <section id="a-propos">
+        <h2 class="with-icon" data-aos="fade-right">À propos</h2>
+        <p style="overflow: hidden" data-aos="fade-left" data-aos-delay="100">
           <img
             src="/pictures/Design sans titre.png"
             alt="Arthur TCHANDA"
@@ -144,7 +142,7 @@
             ></span
           >
         </p>
-        <section id="cv">
+        <section id="cv" data-aos="fade-up" data-aos-delay="200">
           <a
             href="/CV Professionnel Arthur TCHANDA.pdf"
             download
@@ -155,58 +153,57 @@
         </section>
       </section>
 
-      <section id="competences" data-aos="fade-left">
-        <h2 class="with-icon">Compétences</h2>
-        <div class="skill">
+      <section id="competences">
+        <h2 class="with-icon" data-aos="fade-right">Compétences</h2>
+        <div class="skill" data-aos="fade-left" data-aos-delay="0">
           <span>HTML/CSS</span>
-          <div class="bar"><div class="level" style="width: 95%"></div></div>
+          <div class="bar"><div class="level" data-width="95"></div></div>
         </div>
-        <div class="skill">
+        <div class="skill" data-aos="fade-left" data-aos-delay="100">
           <span>JavaScript</span>
-          <div class="bar"><div class="level" style="width: 60%"></div></div>
+          <div class="bar"><div class="level" data-width="60"></div></div>
         </div>
-        <div class="skill">
+        <div class="skill" data-aos="fade-left" data-aos-delay="200">
           <span>Arduino / Node-Red</span>
-          <div class="bar"><div class="level" style="width: 70%"></div></div>
+          <div class="bar"><div class="level" data-width="70"></div></div>
         </div>
-        <div class="skill">
+        <div class="skill" data-aos="fade-left" data-aos-delay="300">
           <span>Python</span>
-          <div class="bar"><div class="level" style="width: 80%"></div></div>
+          <div class="bar"><div class="level" data-width="80"></div></div>
         </div>
-        <div class="skill">
+        <div class="skill" data-aos="fade-left" data-aos-delay="400">
           <span>SQL/php</span>
-          <div class="bar"><div class="level" style="width: 40%"></div></div>
+          <div class="bar"><div class="level" data-width="40"></div></div>
         </div>
       </section>
 
-      <section id="temoignages" data-aos="zoom-in">
-        <h2 class="with-icon">Parcours</h2>
-        <div class="testimonial">
+      <section id="temoignages">
+        <h2 class="with-icon" data-aos="zoom-in">Parcours</h2>
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="0">
           <h3>Baccalauréat scientifique (2023)</h3>
           <p>
             J'ai obtenu mon baccalauréat scientifique (S2) en 2023 au collège sacré cœur, Dakar, Sénégal.
           </p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
           <h3>Licence Electronique Telecom et Système Embarqué (en cours)</h3>
           <p>
             Actuellement en troisième année de licence à l'Institut Supérieur de Management (ISM) à Dakar, Sénégal.
           </p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
           <h3>Stages et Projets</h3>
           <p>
             J'ai réalisé plusieurs projets personnels et stages en développement web et électronique embarquée, renforçant mes compétences pratiques, notamment un stage de 3 mois a ISM (Institut Supérieur de Management) où j'ai travaillé sur la creation de PCB et de solutions embarquées innovantes, et un stage en développement web et mobile a Ecole au Sénégal.
           </p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
           <h3>Auto-Formation en développement web (2021-en cours)</h3>
           <p>
             Depuis 2021, je me forme de manière autonome au développement web (HTML, CSS, JavaScript) et en 2024 je me suis intéressé à l'électronique embarquée (Arduino, capteurs, IoT, Node-Red) à travers ma filière d'études et des projets personnel pratiques, comme la conception d'un système de surveillance IoT.
           </p>
         </div>
-
-        <div class="testimonial">
+        <div class="testimonial" data-aos="fade-up" data-aos-delay="400">
           <h3>Dans le futur...</h3>
           <p>
             je souhaite devenir un ingénieur en systèmes embarqués, en combinant mes compétences en développement logiciel et en électronique pour créer des solutions innovantes dans des domaines comme l'IoT, aéronautique, véhicules autonomes ou la domotique.
@@ -214,12 +211,14 @@
         </div>
       </section>
 
-      <section id="contact" data-aos="fade-down">
-        <h2 class="with-icon">Me contacter</h2>
+      <section id="contact">
+        <h2 class="with-icon" data-aos="fade-down">Me contacter</h2>
         <form
           class="contact-form"
           action="https://formspree.io/f/xwpopzgy"
           method="POST"
+          data-aos="zoom-in"
+          data-aos-delay="100"
         >
           <input type="text" name="name" placeholder="Ton nom" required />
           <input type="email" name="email" placeholder="Ton email" required />
@@ -238,7 +237,7 @@
         <div class="loader" id="form-loader" style="display: none"></div>
 
         <!-- Contact details (email + phone) - styled and accessible -->
-        <div class="contact-info" aria-label="Coordonnées">
+        <div class="contact-info" aria-label="Coordonnées" data-aos="fade-up" data-aos-delay="200">
           <a
             href="mailto:arthurtchanda@gmail.com"
             class="contact-item"
@@ -280,7 +279,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 600,
+        offset: 40,
+        once: true,
+        easing: "ease-out-cubic",
+      });
     </script>
     <script src="/JS/index.js"></script>
   </body>

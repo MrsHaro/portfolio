@@ -731,7 +731,6 @@ footer {
   box-shadow: 0 12px 28px rgba(31, 187, 120, 0.4);
 }
 
-/* === Animation de transition page === */
 .page-transition {
   opacity: 1;
   transition: opacity 0.5s ease;

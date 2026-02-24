@@ -76,7 +76,6 @@ backToTopButton.addEventListener("click", () => {
   });
 });
 
-//*=== Animation de transition entre les pages ===
 document.querySelectorAll("a").forEach((link) => {
   const href = link.getAttribute("href");
   if (

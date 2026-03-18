@@ -586,3 +586,34 @@ body.dark-mode #page-loader {
     padding: 8px 12px;
   }
 }
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.7em;
+    line-height: 1.15;
+  }
+
+  header p {
+    font-size: 0.98rem;
+  }
+
+  main {
+    margin: 1.25rem auto;
+    padding: 0 0.9rem;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .carousel-track img {
+    width: min(720px, 92vw);
+    margin-right: 14px;
+  }
+
+  .btn-cv,
+  .btn-download {
+    width: 100%;
+    text-align: center;
+  }
+}

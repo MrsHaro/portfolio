@@ -167,6 +167,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -578,6 +579,105 @@ footer {
   }
   .theme-toggle-text {
     display: none;
+  }
+}
+
+/* ========== RESPONSIVE (mobile/tablette) ========== */
+@media (max-width: 900px) {
+  body {
+    padding: 0 0.75rem;
+  }
+
+  header {
+    padding: 2rem 1rem;
+  }
+
+  main {
+    margin: 1.5rem auto;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.85rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  header .profile-img-wrap img {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav ul {
+    gap: 0.75rem 1rem;
+  }
+
+  nav a {
+    padding-bottom: 3px;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .projet {
+    padding: 1.15rem 1.05rem;
+  }
+
+  /* Boutons projets plus faciles à toucher */
+  .btn-cv,
+  .btn-project,
+  .btn-project2,
+  .btn-project3 {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem 1rem;
+  }
+
+  .btn-cv {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  /* À propos : annule le float inline sur mobile */
+  #a-propos img {
+    float: none !important;
+    display: block !important;
+    width: min(240px, 75vw) !important;
+    margin: 0 auto 0.85rem auto !important;
+    border-radius: 12px !important;
+  }
+
+  #a-propos span {
+    font-size: 1.05em !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Back-to-top un peu plus compact */
+  #back-to-top {
+    right: 18px;
+    bottom: 18px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    padding: 1.75rem 0.9rem;
+  }
+
+  nav ul {
+    gap: 0.6rem 0.8rem;
   }
 }
 

@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./react-island/react-island.css" />
   </head>
 
   <body class="page-transition">
@@ -35,63 +36,27 @@
           />
         </div>
         <h1>Arthur TCHANDA</h1>
-        <p>Développeur web et passionné d'électronique embarquée.</p>
+        <p data-i18n="header.subtitle">
+          Développeur web et passionné d'électronique embarquée.
+        </p>
       </div>
-      <button
-        id="theme-toggle"
-        class="theme-toggle"
-        aria-label="Changer le thème"
-      >
-        <svg
-          class="theme-toggle-icon sun-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-        >
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg
-          class="theme-toggle-icon moon-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-        >
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <span class="theme-toggle-text">Mode sombre</span>
-      </button>
+      <div id="react-controls" aria-label="Préférences"></div>
 
       <nav>
         <ul>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#a-propos">À propos</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+          <li><a href="#a-propos" data-i18n="nav.about">À propos</a></li>
+          <li><a href="#competences" data-i18n="nav.skills">Compétences</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section id="projets">
-        <h2 class="with-icon" data-aos="fade-down">Mes projets</h2>
-        <div class="projet" data-aos="fade-up" data-aos-delay="0">
-          <h3>ElectroTools</h3>
-          <p>Application mobile pour calculs électroniques.</p>
-        </div>
+        <h2 class="with-icon" data-aos="fade-down" data-i18n="section.projects">
+          Mes projets
+        </h2>
         <div class="projet" data-aos="fade-up" data-aos-delay="100">
           <h3>Alarme capteur HC-SR04</h3>
           <p>Prototype Arduino avec LEDs, LCD et buzzer.</p>
@@ -116,7 +81,9 @@
       </section>
 
       <section id="a-propos">
-        <h2 class="with-icon" data-aos="fade-right">À propos</h2>
+        <h2 class="with-icon" data-aos="fade-right" data-i18n="section.about">
+          À propos
+        </h2>
         <p style="overflow: hidden" data-aos="fade-left" data-aos-delay="100">
           <img
             src="/pictures/Design sans titre.png"
@@ -154,7 +121,13 @@
       </section>
 
       <section id="competences">
-        <h2 class="with-icon" data-aos="fade-right">Compétences</h2>
+        <h2
+          class="with-icon"
+          data-aos="fade-right"
+          data-i18n="section.skills"
+        >
+          Compétences
+        </h2>
         <div class="skill" data-aos="fade-left" data-aos-delay="0">
           <span>HTML/CSS</span>
           <div class="bar"><div class="level" data-width="95"></div></div>
@@ -212,7 +185,9 @@
       </section>
 
       <section id="contact">
-        <h2 class="with-icon" data-aos="fade-down">Me contacter</h2>
+        <h2 class="with-icon" data-aos="fade-down" data-i18n="section.contact">
+          Me contacter
+        </h2>
         <form
           class="contact-form"
           action="https://formspree.io/f/xwpopzgy"
@@ -220,15 +195,28 @@
           data-aos="zoom-in"
           data-aos-delay="100"
         >
-          <input type="text" name="name" placeholder="Ton nom" required />
-          <input type="email" name="email" placeholder="Ton email" required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Ton nom"
+            data-i18n-placeholder="contact.name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Ton email"
+            data-i18n-placeholder="contact.email"
+            required
+          />
           <textarea
             name="message"
             placeholder="Ton message..."
+            data-i18n-placeholder="contact.message"
             rows="6"
             required
           ></textarea>
-          <button type="submit">Envoyer</button>
+          <button type="submit" data-i18n="contact.send">Envoyer</button>
         </form>
         <div
           id="form-message"
@@ -257,7 +245,7 @@
     <button id="back-to-top" title="Remonter en haut">⬆</button>
 
     <footer>
-      <p>© 2025 Arthur TCHANDA — Portfolio personnel</p>
+      <p>© 2026 Arthur TCHANDA — Portfolio personnel</p>
       <div class="social-links">
         <a href="https://github.com/MrsHaro" target="_blank" aria-label="GitHub"
           ><i class="fab fa-github"></i
@@ -286,6 +274,7 @@
         easing: "ease-out-cubic",
       });
     </script>
+    <script type="module" src="./react-island/react-island.js"></script>
     <script src="/JS/index.js"></script>
   </body>
 

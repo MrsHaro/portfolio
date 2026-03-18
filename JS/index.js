@@ -23,26 +23,7 @@ form.addEventListener("submit", function (event) {
   }
 });
 
-// ! Gestion du changement de thème
-const toggleButton = document.getElementById("theme-toggle");
-
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark-mode");
-  toggleButton.querySelector(".theme-toggle-text").textContent = "Mode clair";
-}
-
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-
-  if (document.body.classList.contains("dark-mode")) {
-    toggleButton.querySelector(".theme-toggle-text").textContent = "Mode clair";
-    localStorage.setItem("theme", "dark");
-  } else {
-    toggleButton.querySelector(".theme-toggle-text").textContent =
-      "Mode sombre";
-    localStorage.setItem("theme", "light");
-  }
-});
+// Gestion du thème : désormais gérée par React sur la page d'accueil.
 
 // ?Scroll doux vers les ancres
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
